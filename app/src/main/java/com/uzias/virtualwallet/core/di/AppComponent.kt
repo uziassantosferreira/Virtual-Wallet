@@ -1,5 +1,6 @@
 package com.uzias.virtualwallet.core.di
 
+import android.content.Context
 import dagger.Component
 import retrofit2.Retrofit
 import javax.inject.Singleton
@@ -9,4 +10,6 @@ import javax.inject.Singleton
 interface AppComponent {
 
     fun retrofit(): Retrofit
+
+    fun context(): Context
 }
