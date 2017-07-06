@@ -1,0 +1,5 @@
+<resources>
+    <string name="loading">Carregando…</string>
+    <string name="send_money">Enviar dinheiro</string>
+    <string name="shipping_history">Histórico de envios</string>
+</resources>

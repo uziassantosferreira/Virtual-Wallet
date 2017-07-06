@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Virtual Wallet</string>
     <string name="loading">Loading…</string>
+    <string name="send_money">Send money</string>
+    <string name="shipping_history">Shipping history</string>
 </resources>
