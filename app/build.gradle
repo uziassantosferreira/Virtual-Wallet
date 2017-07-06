@@ -29,7 +29,7 @@ android {
     compileSdkVersion androidSdkVersion
     buildToolsVersion androidBuildToolsVersion
     defaultConfig {
-        applicationId
+        applicationId androidApplicationId
         minSdkVersion androidMinSdkVersion
         targetSdkVersion androidTargetSdkVersion
         versionCode androidVersionCode

@@ -5,8 +5,13 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.uzias.virtualwallet.core.application.VirtualWalletApplication
 import com.uzias.virtualwallet.core.di.AppComponent
+import android.app.ProgressDialog
+import com.uzias.virtualwallet.R
+
 
 abstract class BaseActivity : AppCompatActivity(), BaseView {
+
+    lateinit var progress: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +26,15 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
     override fun onDestroy() {
         super.onDestroy()
         unbindPresenter()
+    }
+
+    override fun showLoading() {
+        progress = ProgressDialog.show(this, getString(R.string.app_name),
+                getString(R.string.loading), true);
+    }
+
+    override fun dismissLoading() {
+        progress.dismiss()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

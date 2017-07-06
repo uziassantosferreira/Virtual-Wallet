@@ -5,7 +5,7 @@ import com.uzias.virtualwallet.R
 import com.uzias.virtualwallet.core.presentation.BaseActivity
 import com.uzias.virtualwallet.core.presentation.BasePresenter
 import com.uzias.virtualwallet.welcome.di.component.DaggerWelcomeComponent
-import com.uzias.virtualwallet.welcome.presentation.model.PresentationUser
+import com.uzias.virtualwallet.user.presentation.model.PresentationUser
 import com.uzias.virtualwallet.welcome.presentation.presenter.WelcomePresenter
 import kotlinx.android.synthetic.main.activity_welcome.*
 import javax.inject.Inject
@@ -38,14 +38,6 @@ class WelcomeActivity : BaseActivity(), WelcomeView {
                 .appComponent(getAppComponent())
                 .build()
                 .inject(this)
-    }
-
-    override fun showLoading() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun dismissLoading() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun setCurrentUser(user: PresentationUser) {
